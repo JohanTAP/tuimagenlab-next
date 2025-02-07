@@ -10,6 +10,7 @@ import
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
+    type CarouselApi,
 } from "@/components/ui/carousel";
 
 const dentalCases = [
@@ -35,24 +36,35 @@ const dentalCases = [
 
 const Hero = () =>
 {
-    const [ activeIndex, setActiveIndex ] = useState( 0 );
+    const [ emblaApi, setEmblaApi ] = useState<CarouselApi | null>( null );
 
     useEffect( () =>
     {
+        if ( !emblaApi ) return;
+
         const interval = setInterval( () =>
         {
-            setActiveIndex( ( prevIndex ) => ( prevIndex + 1 ) % dentalCases.length );
-        }, 5000 );
+            if ( emblaApi.canScrollNext() )
+            {
+                emblaApi.scrollNext();
+            } else
+            {
+                emblaApi.scrollTo( 0 );
+            }
+        }, 4000 );
 
         return () => clearInterval( interval );
-    }, [] );
+    }, [ emblaApi ] );
 
     return (
         <section className="relative w-full h-[calc(100vh-80px)] overflow-hidden">
-            <Carousel>
+            <Carousel setApi={ setEmblaApi }>
                 <CarouselContent>
-                    { dentalCases.map( ( item, index ) => (
-                        <CarouselItem key={ item.id } className="relative w-full h-[calc(100vh-80px)]" data-active={ index === activeIndex }>
+                    { dentalCases.map( ( item ) => (
+                        <CarouselItem
+                            key={ item.id }
+                            className="relative w-full h-[calc(100vh-80px)]"
+                        >
                             <Image
                                 src={ item.image }
                                 alt={ item.title }

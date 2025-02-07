@@ -22,7 +22,7 @@ const Header = () =>
 {
     return (
         <header className="bg-white shadow">
-            <div className="container mx-auto flex items-center justify-between py-4 px-1">
+            <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
                 <Link href="/" legacyBehavior passHref>
                     <a className="text-2xl font-bold">Tu Imagen Lab</a>
                 </Link>
