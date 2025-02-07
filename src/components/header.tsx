@@ -13,7 +13,7 @@ import
 const Header = () =>
 {
     return (
-        <header className="bg-white shadow sticky top-0 z-50">
+        <header className="bg-white shadow">
             <div className="container mx-auto flex items-center justify-between py-4">
                 <Link href="/" legacyBehavior passHref>
                     <a className="text-2xl font-bold">Tu Imagen Lab</a>
