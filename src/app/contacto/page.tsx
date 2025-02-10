@@ -1,4 +1,8 @@
+import { ContactLocations } from "./components/contact-locations";
+
 export default function Contacto ()
 {
-    return <div>Contacto</div>;
+    return (
+        <ContactLocations />
+    );
 }
