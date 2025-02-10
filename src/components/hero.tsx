@@ -16,21 +16,21 @@ import
 const dentalCases = [
     {
         id: 1,
-        title: "Prótesis Digital - Caso 1",
+        title: "Prótesis Digital",
         description: "Diseño y manufactura a medida para restaurar sonrisas.",
-        image: "/placeholder.svg",
+        image: "/7.png",
     },
     {
         id: 2,
-        title: "Prótesis Digital - Caso 2",
+        title: "Prótesis Digital",
         description: "Innovación y precisión en cada detalle.",
-        image: "/placeholder.svg",
+        image: "/11.png",
     },
     {
         id: 3,
-        title: "Prótesis Digital - Caso 3",
+        title: "Prótesis Digital",
         description: "Soluciones personalizadas para cada paciente.",
-        image: "/placeholder.svg",
+        image: "/12.png",
     },
 ];
 
