@@ -3,6 +3,7 @@ import { WorkflowHero } from "./components/workflow-hero"
 import { WorkflowSteps } from "./components/workflow-steps"
 import { WorkflowDelivery } from "./components/workflow-delivery"
 import { WorkflowTimeline } from "./components/workflow-timeline"
+import { WorkflowDiagram } from "./components/workflow-diagram"
 
 export const metadata: Metadata = {
     title: "Cómo Trabajamos | Tu Imagen Lab",
@@ -15,6 +16,7 @@ export default function HowWeWorkPage ()
         <main className="min-h-screen bg-background pb-16">
             <WorkflowHero />
             <WorkflowSteps />
+            <WorkflowDiagram />
             <WorkflowDelivery />
             <WorkflowTimeline />
         </main>
