@@ -6,7 +6,7 @@ export function HeroSection ()
     return (
         <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
             <Image
-                src="/images/dental-lab.jpg"
+                src="/70.png"
                 alt="Tu Imagen Lab - Laboratorio Dental"
                 layout="fill"
                 objectFit="cover"
