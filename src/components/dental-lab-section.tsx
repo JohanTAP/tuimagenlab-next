@@ -1,48 +1,55 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle } from "lucide-react";
 
 export default function DentalLabSection ()
 {
     return (
         <section className="py-12 md:py-16 lg:py-20 bg-secondary">
             <div className="container mx-auto px-4">
-                <div className="grid gap-8 md:grid-cols-2 md:items-center">
+                <div className="flex flex-col gap-8 md:grid md:grid-cols-2 md:items-center">
 
-                    <div className="relative w-[500px] h-[500px] group perspective-[1200px]">
-                        {/* Contenedor principal que rota */ }
-                        <div className="relative w-full h-full transition-transform duration-700 preserve-3d group-hover:rotate-y-180">
+                    {/* Contenedor de la imagen con hover en pantallas grandes */ }
+                    <div className="w-full max-w-[500px] mx-auto overflow-hidden">
+                        <div className="relative w-full aspect-square group perspective-[1200px]">
 
-                            {/* Imagen frontal */ }
-                            <div className="absolute inset-0 w-full h-full backface-hidden">
-                                <Image
-                                    src="/24.png"
-                                    alt="Prótesis dentales sobre implantes"
-                                    width={ 500 }
-                                    height={ 500 }
-                                    className="w-full h-full rounded-lg shadow-lg object-cover"
-                                />
+                            {/* Contenedor rotatorio con hover solo en pantallas grandes */ }
+                            <div className="relative w-full h-full transition-transform duration-700 preserve-3d md:group-hover:rotate-y-180">
+
+                                {/* Imagen frontal */ }
+                                <div className="absolute inset-0 w-full h-full backface-hidden">
+                                    <Image
+                                        src="/24.png"
+                                        alt="Prótesis dentales sobre implantes"
+                                        width={ 500 }
+                                        height={ 500 }
+                                        className="w-full h-auto rounded-lg shadow-lg object-cover"
+                                    />
+                                </div>
+
+                                {/* Imagen trasera */ }
+                                <div className="absolute inset-0 w-full h-full rotate-y-180 backface-hidden">
+                                    <Image
+                                        src="/25.png"
+                                        alt="Tecnología de Vanguardia"
+                                        width={ 500 }
+                                        height={ 500 }
+                                        className="w-full h-auto rounded-lg shadow-lg object-cover"
+                                    />
+                                </div>
+
                             </div>
-
-                            {/* Imagen trasera */ }
-                            <div className="absolute inset-0 w-full h-full rotate-y-180 backface-hidden">
-                                <Image
-                                    src="/25.png"
-                                    alt="Tecnología de Vanguardia"
-                                    width={ 500 }
-                                    height={ 500 }
-                                    className="w-full h-full rounded-lg shadow-lg object-cover"
-                                />
-                            </div>
-
                         </div>
                     </div>
 
+                    {/* Contenido del card */ }
                     <Card>
                         <CardHeader>
-                            <CardTitle className="text-2xl font-bold">Laboratorio Dental con Impresión 3D Avanzada</CardTitle>
+                            <CardTitle className="text-2xl font-bold">
+                                Laboratorio Dental con Impresión 3D Avanzada
+                            </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p className="text-muted-foreground">
@@ -63,8 +70,9 @@ export default function DentalLabSection ()
                             </Button>
                         </CardContent>
                     </Card>
+
                 </div>
             </div>
         </section>
-    )
+    );
 }
