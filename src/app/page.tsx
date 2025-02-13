@@ -1,3 +1,4 @@
+import DentalBanner from "@/components/dental-banner";
 import DentalLabSection from "@/components/dental-lab-section";
 import { Footer } from "@/components/footer";
 import Hero from "@/components/hero";
@@ -8,6 +9,7 @@ export default function Inicio ()
     <>
       <Hero />
       <DentalLabSection />
+      <DentalBanner />
       <div className=" bg-primary text-white p-4 text-center">
         <p className="text-xl mb-4">¿Cómo nos contactas?</p>
         <div className="flex justify-center space-x-4">
