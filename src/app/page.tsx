@@ -1,7 +1,9 @@
+import { BannerEscaneo } from "@/components/bannerScaneo";
 import DentalBanner from "@/components/dental-banner";
 import DentalLabSection from "@/components/dental-lab-section";
 import { Footer } from "@/components/footer";
 import Hero from "@/components/hero";
+
 
 export default function Inicio ()
 {
@@ -10,6 +12,7 @@ export default function Inicio ()
       <Hero />
       <DentalLabSection />
       <DentalBanner />
+      <BannerEscaneo />
       <div className=" bg-muted text-primary p-4 text-center">
         <p className="text-xl mb-4">¿Cómo nos contactas?</p>
         <div className="flex justify-center space-x-4">
