@@ -23,7 +23,7 @@ export function Footer ()
 
                 {/* Redes sociales */ }
                 <div className="flex space-x-4">
-                    <Link href="#" className="text-gray-400 hover:text-gray-500">
+                    <Link href="http://facebook.com/tuimagenrx" className="text-gray-400 hover:text-gray-500">
                         <span className="sr-only">Facebook</span>
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -33,7 +33,7 @@ export function Footer ()
                             />
                         </svg>
                     </Link>
-                    <Link href="#" className="text-gray-400 hover:text-gray-500">
+                    <Link href="http://instagram.com/tuimagenrx" className="text-gray-400 hover:text-gray-500">
                         <span className="sr-only">Instagram</span>
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path
