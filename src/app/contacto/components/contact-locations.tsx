@@ -1,8 +1,9 @@
+import { ContactForm } from "@/components/contactform"
 import { Container } from "@/components/ui/container"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Phone, Clock } from "lucide-react"
+/* import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { MapPin, Phone, Clock } from "lucide-react" */
 
-const locations = [
+/* const locations = [
     {
         name: "Talca Centro",
         address: "Uno Sur 1122, Of. 413 - Piso 4 Edif. Plaza Talca",
@@ -33,15 +34,17 @@ const locations = [
         phone: "+56 44 368 3380",
         hours: "Lun - Vie de 09:00 a 14:00 y 15:00 a 18:30, Sábados de 10:00 a 13:30 (Previa reserva de hora)",
     },
-]
+] */
 
 export function ContactLocations ()
 {
     return (
         <section className="py-20">
             <Container>
-                <h2 className="text-3xl font-bold text-center mb-12">Nuestros Centros de RX con escáner intraoral</h2>
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <h2 className="text-3xl font-bold text-center mb-12">Contacto</h2>
+                <ContactForm />
+                {/*<h2 className="text-3xl font-bold text-center mb-12">Nuestros Centros de RX con escáner intraoral</h2>
+                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     { locations.map( ( location, index ) => (
                         <Card key={ index } className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
                             <CardHeader>
@@ -63,7 +66,7 @@ export function ContactLocations ()
                             </CardContent>
                         </Card>
                     ) ) }
-                </div>
+                </div> */}
                 <div className="mt-12 text-center">
                     <p className="text-xl mb-4">¿Cómo nos contactas?</p>
                     <div className="flex justify-center space-x-4">
@@ -79,4 +82,3 @@ export function ContactLocations ()
         </section>
     )
 }
-
