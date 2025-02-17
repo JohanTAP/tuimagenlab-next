@@ -18,7 +18,7 @@ const dentalCases = [
         id: 1,
         title: "Prótesis Digital",
         description: "Diseño y manufactura a medida para restaurar sonrisas.",
-        image: "/7.png",
+        image: "/42.png",
     },
     {
         id: 2,
