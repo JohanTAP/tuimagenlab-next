@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container"
 import { Card, CardHeader, CardTitle } from "@/components/ui/card"
-import { Scan, PenTool, Printer, Paintbrush, CheckCircle } from "lucide-react"
+import { Scan, PenTool, Printer, Paintbrush } from "lucide-react"
+import Image from "next/image"
 
 const services = [
     {
@@ -26,16 +27,46 @@ const services = [
 ]
 
 const detailedServices = [
-    "Escaneo intraoral",
-    "Escaneo de modelos",
-    "Carillas en feldespato, disilicato, zirconio, resina 3D impresa",
-    "Coronas en feldespato, disilicato, zirconio, resina 3D impresa",
-    "Inlay, Onlay, Overlay en feldespato, disilicato, Zirconio, resina 3D impresa",
-    "Arco parcial o completo en disilicato, resina 3D impresa o zirconio",
-    "Planos o férula de alivio oclusal",
-    "Guías Quirúrgicas para implantes o mini tornillos de ortodoncia",
-    "Diseños de sonrisa",
-    "Impresión 3D de modelos",
+    {
+        title: "Escaneo intraoral",
+        image: "/placeholder.svg",
+    },
+    {
+        title: "Escaneo de modelos",
+        image: "/placeholder.svg",
+    },
+    {
+        title: "Carillas en feldespato, disilicato, zirconio, resina 3D impresa",
+        image: "/carillas.png",
+    },
+    {
+        title: "Coronas en feldespato, disilicato, zirconio, resina 3D impresa",
+        image: "/coronas.png",
+    },
+    {
+        title: "Inlay, Onlay, Overlay en feldespato, disilicato, Zirconio, resina 3D impresa",
+        image: "/30.png",
+    },
+    {
+        title: "Arco parcial o completo en disilicato, resina 3D impresa o zirconio",
+        image: "/placeholder.svg",
+    },
+    {
+        title: "Planos o férula de alivio oclusal",
+        image: "/placeholder.svg",
+    },
+    {
+        title: "Guías Quirúrgicas para implantes o mini tornillos de ortodoncia",
+        image: "/guiaquirurgica.png",
+    },
+    {
+        title: "Diseños de sonrisa",
+        image: "/placeholder.svg",
+    },
+    {
+        title: "Impresión 3D de modelos",
+        image: "/placeholder.svg",
+    },
 ]
 
 export function ServicesOverview ()
@@ -56,13 +87,25 @@ export function ServicesOverview ()
                     ) ) }
                 </div>
 
-                <h3 className="text-2xl font-bold text-center mb-8">Más destalles de nuestras prestaciones</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <h3 className="text-2xl font-bold text-center mb-8">Más detalles de nuestras prestaciones</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     { detailedServices.map( ( service, index ) => (
-                        <div key={ index } className="flex items-start space-x-2">
-                            <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                            <span>{ service }</span>
-                        </div>
+                        <Card key={ index } className="flex flex-row h-32 transition-all duration-300 hover:shadow-lg">
+                            {/* Imagen con tamaño igual al contenido */ }
+                            <div className="w-1/2 h-full relative">
+                                <Image
+                                    src={ service.image }
+                                    alt={ service.title }
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-l-lg"
+                                />
+                            </div>
+                            {/* Contenido con tamaño igual a la imagen */ }
+                            <CardHeader className="w-1/2 flex items-center justify-center p-4">
+                                <CardTitle className="text-center text-sm">{ service.title }</CardTitle>
+                            </CardHeader>
+                        </Card>
                     ) ) }
                 </div>
             </Container>
