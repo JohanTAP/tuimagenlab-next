@@ -29,11 +29,11 @@ const services = [
 const detailedServices = [
     {
         title: "Escaneo intraoral",
-        image: "/placeholder.svg",
+        image: "/escaneointra.png",
     },
     {
         title: "Escaneo de modelos",
-        image: "/placeholder.svg",
+        image: "/escaneomodelos.png",
     },
     {
         title: "Carillas en feldespato, disilicato, zirconio, resina 3D impresa",
@@ -49,11 +49,11 @@ const detailedServices = [
     },
     {
         title: "Arco parcial o completo en disilicato, resina 3D impresa o zirconio",
-        image: "/placeholder.svg",
+        image: "/fullarch.png",
     },
     {
         title: "Planos o férula de alivio oclusal",
-        image: "/placeholder.svg",
+        image: "/IMG_2191.png",
     },
     {
         title: "Guías Quirúrgicas para implantes o mini tornillos de ortodoncia",
@@ -61,11 +61,11 @@ const detailedServices = [
     },
     {
         title: "Diseños de sonrisa",
-        image: "/placeholder.svg",
+        image: "/smiledesign.png",
     },
     {
         title: "Impresión 3D de modelos",
-        image: "/placeholder.svg",
+        image: "/IMG_9237.png",
     },
 ]
 
@@ -96,8 +96,8 @@ export function ServicesOverview ()
                                 <Image
                                     src={ service.image }
                                     alt={ service.title }
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill
+                                    style={ { objectFit: "cover" } }
                                     className="rounded-l-lg"
                                 />
                             </div>
