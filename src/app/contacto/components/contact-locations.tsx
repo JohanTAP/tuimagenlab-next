@@ -1,6 +1,6 @@
 import { ContactForm } from "@/components/contactform"
-import { Container } from "@/components/ui/container"
-/* import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+/*import { Container } from "@/components/ui/container"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Clock } from "lucide-react" */
 
 /* const locations = [
@@ -39,7 +39,7 @@ import { MapPin, Phone, Clock } from "lucide-react" */
 export function ContactLocations ()
 {
     return (
-        <section className="py-20 w-full">
+        <section className="py-20 h-full">
 
                 <h2 className="text-3xl font-bold text-center mb-12">Contacto</h2>
                 <ContactForm />
