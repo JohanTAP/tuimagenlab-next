@@ -36,8 +36,9 @@ export default function RootLayout ( {
         { children }
         <Toaster />
         <WhatsAppCTA />
+        <Footer />
       </body>
-      <Footer />
+      
     </html>
   );
 }
