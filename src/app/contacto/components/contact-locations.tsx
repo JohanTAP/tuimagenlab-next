@@ -39,8 +39,8 @@ import { MapPin, Phone, Clock } from "lucide-react" */
 export function ContactLocations ()
 {
     return (
-        <section className="py-20">
-            <Container>
+        <section className="py-20 w-full">
+
                 <h2 className="text-3xl font-bold text-center mb-12">Contacto</h2>
                 <ContactForm />
                 {/*<h2 className="text-3xl font-bold text-center mb-12">Nuestros Centros de RX con escáner intraoral</h2>
@@ -78,7 +78,7 @@ export function ContactLocations ()
                         </a>
                     </div>
                 </div>
-            </Container>
+
         </section>
     )
 }
