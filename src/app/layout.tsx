@@ -28,12 +28,14 @@ export default function RootLayout ( {
 }> )
 {
   return (
-    <html lang="es">
+    <html lang="es" className="h-full">
       <body
-        className={ `${ geistSans.variable } ${ geistMono.variable } antialiased` }
+        className={ `flex flex-col h-full ${ geistSans.variable } ${ geistMono.variable } antialiased` }
       >
         <Header />
-        { children }
+        <main className="flex-1">
+          {children}
+        </main>
         <Toaster />
         <WhatsAppCTA />
         <Footer />

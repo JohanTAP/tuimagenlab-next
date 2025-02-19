@@ -39,7 +39,7 @@ import { MapPin, Phone, Clock } from "lucide-react" */
 export function ContactLocations ()
 {
     return (
-        <section className="py-20 min-h-screen">
+        <section className="py-20">
 
                 <h2 className="text-3xl font-bold text-center mb-12">Contacto</h2>
                 <ContactForm />
