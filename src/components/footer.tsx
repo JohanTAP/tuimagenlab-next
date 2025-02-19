@@ -5,7 +5,7 @@ export function Footer ()
 {
     return (
         <footer className="bg-gray-900 py-4">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm px-4">
+            <div className="w-full flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm px-4">
 
                 {/* Copy */ }
                 <p className="text-center md:text-left">&copy; { new Date().getFullYear() } Tu Imagen Lab. Todos los derechos reservados.</p>
