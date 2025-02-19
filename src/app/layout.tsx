@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import { Toaster } from "sonner"
 import WhatsAppCTA from "@/components/whatsapp-cta";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist( {
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout ( {
         <Toaster />
         <WhatsAppCTA />
       </body>
+      <Footer />
     </html>
   );
 }

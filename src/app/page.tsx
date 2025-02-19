@@ -1,7 +1,6 @@
 import { BannerEscaneo } from "@/components/bannerScaneo";
 import DentalBanner from "@/components/dental-banner";
 import DentalLabSection from "@/components/dental-lab-section";
-import { Footer } from "@/components/footer";
 import Hero from "@/components/hero";
 
 
@@ -24,7 +23,6 @@ export default function Inicio ()
           </a>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
